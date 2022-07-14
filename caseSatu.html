@@ -1,0 +1,51 @@
+<html>
+    <body>
+        <script>
+            function display() {
+            document.getElementById("nama").innerHTML = document.getElementById("inputNama").value; 
+            var nama = document.getElementById("inputNama").value
+            
+            document.getElementById("nilai").innerHTML = document.getElementById("inputNilai").value; 
+            var nilai = document.getElementById("inputNilai").value
+            
+            if (nilai <= 100 && nilai>= 80) {
+                return document.getElementById("output").innerHTML = "Nilai " + nama + " mendapatkan nilai A"
+            } else if (nilai < 80 && nilai >= 65) {
+                return document.getElementById("output").innerHTML = "Nilai " + nama + " mendapatkan nilai B"
+            } else if (nilai < 65 && nilai >= 50) {
+                return document.getElementById("output").innerHTML = "Nilai " + nama + " mendapatkan nilai C"
+            } else if (nilai < 50 && nilai >= 35) {
+                return document.getElementById("output").innerHTML = "Nilai " + nama + " mendapatkan nilai D"
+            } else if (nilai < 35 && nilai >= 1) {
+                return document.getElementById("output").innerHTML = "Nilai " + nama + " mendapatkan nilai E"
+            } else {
+                return document.getElementById("output").innerHTML = "Nilai Invalid"
+            }
+            }
+        </script>
+
+        <div style="margin-bottom: 15px">
+            <td>Nama</td>
+            <td><input type="text" name="inputNama" id="inputNama"></td>
+        </div>
+        <div  style="margin-bottom: 15px">
+            <td>Nilai </td>
+            <td><input type="number" name="inputNilai" id="inputNilai"></td>
+        </div>
+
+        <div style="margin-bottom: 15px">
+            <input type="button" value="Submit" name="submit" id="submit" onClick="display()"/>
+        </div>
+
+        <div style="margin-bottom: 10px"><b>Nama: </b>
+            <span id="nama"></span>
+        </div>
+        <div style="margin-bottom: 10px">
+            <b>Nilai: </b>
+            <span id="nilai"></span>
+        </div>
+        <div style="margin-bottom: 10px"> Output:
+            <span id="output"></span>
+        </div>
+    </body>
+</html>

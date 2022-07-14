@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+            function display() {
+            document.getElementById("name").innerHTML = document.getElementById("inputName").value; 
+            var name = document.getElementById("inputName").value
+            var lowerCase = name.toLowerCase()
+            var firstLetter = lowerCase.charAt(0)
+            
+            if (firstLetter == 'a' || firstLetter == 'b' || firstLetter == 'c' || firstLetter == 'd' ) {
+                return document.getElementById("output").innerHTML = "Masuk group pertama"
+            } else if (firstLetter == 'e' || firstLetter == 'f' || firstLetter == 'g' || firstLetter == 'h' || firstLetter == 'i' ) {
+                return document.getElementById("output").innerHTML = "Masuk group kedua"
+            } else {
+                return document.getElementById("output").innerHTML = "Masuk group terakhir"
+            }
+            }
+        </script>
+        
+        <div style="margin-bottom: 15px">
+            <td>Name</td>
+            <td><input type="text" name="inputName" id="inputName"></td>
+        </div>
+
+        <div style="margin-bottom: 15px">
+            <input type="button" value="Submit" name="submit" id="submit" onClick="display()"/>
+        </div>
+
+        <div style="margin-bottom: 10px"><b>Name: </b>
+            <span id="name"></span>
+        </div>
+        <div style="margin-bottom: 10px"> Output:
+            <span id="output"></span>
+        </div>
+
+    </body>
+</html>
